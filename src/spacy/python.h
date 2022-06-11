@@ -148,7 +148,8 @@ namespace Spacy
   private:
     Python();
 
-  private:
+  // NOTE: This was changed from private to public so I could hack it
+  public:
     template <typename T>
     class Convert
     {

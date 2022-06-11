@@ -40,11 +40,13 @@ namespace Spacy
     std::string text_with_ws() const;
     std::vector<Token> tokens() const;
     double vector_norm() const;
+
+    // NOTE: This was moved from private to public so I could hack it
+    PyObjectPtr get_ptr() const;
     
   private:
     Doc(PyObjectPtr p_doc);
 
-    PyObjectPtr get_ptr() const;
 
   private:
     PyObjectPtr m_doc;
